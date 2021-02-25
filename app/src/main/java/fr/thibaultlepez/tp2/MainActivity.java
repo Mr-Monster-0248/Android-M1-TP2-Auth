@@ -64,9 +64,9 @@ public class MainActivity extends AppCompatActivity {
         // Log.d("LEPEZ", auth.getResult());
     }
 
-    class Authenticate implements Runnable {
-        private String _password;
-        private String _login;
+    static class Authenticate implements Runnable {
+        private final String _password;
+        private final String _login;
 
         private String result;
 
@@ -94,11 +94,13 @@ public class MainActivity extends AppCompatActivity {
                     Log.i("LEPEZ", s);
                     this.result = s;
                 } catch (IOException e) {
+                    this.result = "Error";
                     e.printStackTrace();
                 }
 
             } catch (IOException e) {
                 e.printStackTrace();
+                this.result = "Error";
             }
         }
     }
