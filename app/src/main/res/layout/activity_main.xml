@@ -21,6 +21,7 @@
             android:layout_marginBottom="10dp"
             android:autofillHints="e-mail"
             android:ems="10"
+            android:hint="username"
             android:inputType="textEmailAddress"
             tools:ignore="LabelFor" />
 
@@ -31,6 +32,7 @@
             android:layout_marginBottom="10dp"
             android:autofillHints="password"
             android:ems="10"
+            android:hint="password"
             android:inputType="textPassword"
             tools:ignore="LabelFor" />
 
@@ -38,8 +40,15 @@
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Authenticate"
-            android:onClick="authenticate"/>
+            android:layout_marginBottom="10dp"
+            android:onClick="authenticate"
+            android:text="Authenticate" />
+
+        <TextView
+            android:id="@+id/resultText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
 
     </LinearLayout>
 
